@@ -1,7 +1,5 @@
 class Solution(object):
     def maxProfit(self, prices):
-        if prices == sorted(prices,reverse=True):
-            return 0
         profit = 0
         curMin = prices[0]
         Min = prices.index(min(prices))

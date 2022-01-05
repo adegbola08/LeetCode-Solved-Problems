@@ -5,10 +5,9 @@ class Solution:
         for i in nums:
             res.append(before)
             before *= i
-        for i in range(len(nums)-1,0,-1):
+        for i in range(len(nums)-1,-1,-1):
             res[i] = after * res[i]
             after *= nums[i]
-        res[0] = after
         return res
             
             

@@ -7,7 +7,7 @@ class Solution:
                 nums[pos] = nums[i]
                 count += 1
                 pos += 1
-        return pos
+        return count
                 
             
                 

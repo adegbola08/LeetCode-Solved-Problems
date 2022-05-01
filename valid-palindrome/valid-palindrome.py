@@ -1,19 +1,11 @@
-class Solution(object):
-    def isPalindrome(self, s):
-        c = ''
-        for i in s:
-            if i.isalnum():
-                c += i
-        y = (''.join(reversed(c)))
-        if y.lower() == c.lower():
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        word = ""
+        
+        for c in s:
+            if c.isalnum():
+                word += c.lower()
+                
+        if word == "".join(reversed(word)):
             return True
         return False
-        
-        
-        
-        
-        """
-        :type s: str
-        :rtype: bool
-        """
-        

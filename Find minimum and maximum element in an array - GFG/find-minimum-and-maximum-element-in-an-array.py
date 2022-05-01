@@ -1,7 +1,8 @@
 #User function Template for python3
 
 def getMinMax( a, n):
-    return min(a),max(a)
+    a.sort()
+    return a[0],a[-1]
     
     
 

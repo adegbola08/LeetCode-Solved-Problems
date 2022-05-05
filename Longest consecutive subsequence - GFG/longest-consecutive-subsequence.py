@@ -12,9 +12,9 @@ class Solution:
  
         arr.sort()
  
-        v = []
  
-        v.append(arr[0])
+        v = [arr[0]]
+
  
         for i in range(1, n):
             if (arr[i] != arr[i - 1]):

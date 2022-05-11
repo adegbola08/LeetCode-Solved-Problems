@@ -10,8 +10,7 @@ class Solution:
             for j in range(1,len(strs)):
                 if small[i] != strs[j][i]:
                     return result
-            else:
-                result += small[i]
+            result += small[i]
         
         return result
             

@@ -1,26 +1,20 @@
-class Solution(object):
-    def topKFrequent(self, nums, k):
-        lst = []
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        nums.sort()
+        
         dic = {}
-        for i in nums:
-            if i not in dic:
-                dic[i] = nums.count(i)
-        for t,v in dic.items():
-            new = []
-            new.append(t)
-            new.append(v)
-            lst.append(new)
-        lst.sort(key=lambda x: x[1], reverse=True)
-        ans = []
+        
+        for i in range(len(nums)):
+            if nums[i] in dic:
+                dic[nums[i]] += 1
+            else:
+                dic[nums[i]] = 1
+        
+        result = []
         for i in range(k):
-            ans.append(lst[i][0])
-        return ans
-           
+            temp = max(dic, key=dic.get)
+            result.append(temp)
+            dic.pop(temp)
         
-        
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: List[int]
-        """
-        
+        return result
+            

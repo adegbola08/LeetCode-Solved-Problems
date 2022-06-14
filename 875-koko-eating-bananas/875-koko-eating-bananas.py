@@ -12,11 +12,7 @@ class Solution:
                 hours += math.ceil(temp)
                     
             if hours <= h:
-                if k == -1:
-                    k = max(mid, k)
-                else:
-                    k = min(mid, k)
-            
+                k = mid
                 r = mid - 1
             else:
                 l = mid + 1

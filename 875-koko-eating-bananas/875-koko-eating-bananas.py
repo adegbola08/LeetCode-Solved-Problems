@@ -8,11 +8,8 @@ class Solution:
             
             hours = 0
             for i in piles:
-                if mid > i:
-                    hours += 1
-                else:
-                    temp = i / mid
-                    hours += math.ceil(temp)
+                temp = i / mid
+                hours += math.ceil(temp)
                     
             if hours <= h:
                 if k == -1:

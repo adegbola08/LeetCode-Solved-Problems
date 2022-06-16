@@ -11,6 +11,7 @@ class Solution:
                 seen.add(s[r])
                 r += 1
                 count += 1
+            
             result = max(result, count)
             
         return result

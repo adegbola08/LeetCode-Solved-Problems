@@ -7,6 +7,12 @@ class Solution:
             pos += 1
         
         return nums1.sort()
+    
+    
+        """
+        nums1[-n:] = nums[2]
+        return nums1.sort()
+        """
         
         
         

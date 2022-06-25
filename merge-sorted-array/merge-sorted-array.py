@@ -2,8 +2,8 @@ class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         pos = 0
         
-        for i in range(n-1,-1,-1):
-            nums1[-i-1] = nums2[pos]
+        for i in range(n,0,-1):
+            nums1[-i] = nums2[pos]
             pos += 1
         
         return nums1.sort()

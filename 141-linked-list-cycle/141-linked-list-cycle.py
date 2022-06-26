@@ -6,16 +6,16 @@
 
 class Solution(object):
     def hasCycle(self, head):
-        if head == None or head.next == None:
+        if head == None:
             return False
         
         cur = head
         lst = set()
         
         while cur:
-            if cur.next in lst:
+            if cur in lst:
                 return True
-            lst.add(cur.next)
+            lst.add(cur)
             cur = cur.next
         return False
             

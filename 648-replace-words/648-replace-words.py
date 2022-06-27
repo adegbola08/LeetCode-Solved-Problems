@@ -4,6 +4,7 @@ class Solution:
         long = len(max(dic, key=len))
         
         lst = sentence.split(" ")
+        dic = set(dic)
         
         for i in range(len(lst)):
             cur = short

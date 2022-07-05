@@ -1,6 +1,5 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        """nums.sort()"""
         
         dic = {}
         
@@ -10,11 +9,11 @@ class Solution:
             else:
                 dic[nums[i]] = 1
         
-        result = []
+        result = set()
         
         for i in range(k):
             temp = max(dic, key=dic.get)
-            result.append(temp)
+            result.add(temp)
             dic.pop(temp)
         
         return result

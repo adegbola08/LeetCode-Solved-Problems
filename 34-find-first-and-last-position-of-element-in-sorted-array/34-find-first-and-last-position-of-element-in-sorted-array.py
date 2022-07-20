@@ -23,7 +23,6 @@ class Solution:
             new = first
             while new+1 < len(nums) and nums[new+1] == target:
                 new += 1
-            print(new)
             last = new
         
         return [first, last]

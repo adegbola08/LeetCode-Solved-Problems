@@ -8,7 +8,7 @@ class Solution:
                 return mid
             
             
-            if nums[l] <= nums[mid]:
+            elif nums[l] <= nums[mid]:
                 if target > nums[mid] or target < nums[l]:
                     l = mid + 1
                 else:

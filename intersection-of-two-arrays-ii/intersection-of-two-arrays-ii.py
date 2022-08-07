@@ -1,16 +1,20 @@
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        if nums1 <= nums2:
-            lst = []
-            for i in nums1:
-                if i in nums2:
-                    lst.append(i)
-                    nums2.remove(i)
-            return lst
-        lst = []
-        for i in nums2:
-            if i in nums1:
-                lst.append(i)
-                nums1.remove(i)
-        return lst
+        result = []
+        
+        if len(nums1) <= len(nums2):
             
+            for elem in nums1:
+                if elem in nums2:
+                    result.append(elem)
+                    nums2.remove(elem) 
+            
+        else:
+            
+            for elem in nums2:
+                if elem in nums1:
+                    result.append(elem)
+                    nums1.remove(elem)
+        
+        return result
+        

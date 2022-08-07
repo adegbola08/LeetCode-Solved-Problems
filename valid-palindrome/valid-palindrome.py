@@ -6,6 +6,6 @@ class Solution:
             if c.isalnum():
                 word += c.lower()
                 
-        if word == "".join(reversed(word)):
+        if word == word[::-1]:
             return True
         return False

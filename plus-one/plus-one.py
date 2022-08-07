@@ -4,6 +4,7 @@ class Solution:
             digits[-1] += 1
             return digits
         
+        
         number = ""
         
         for i in range(len(digits)):

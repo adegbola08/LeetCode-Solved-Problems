@@ -5,10 +5,12 @@ class Solution:
         
         
         while len(stones) > 1 :
-            stones.sort(reverse=False)
             
-            big = stones.pop(-1)
-            small = stones.pop(-1)
+            big = max(stones)
+            stones.remove(big)
+            small = max(stones)
+            stones.remove(small)
+            
             diff = big - small
             if diff > 0 or len(stones) == 0:
                 stones.append(diff)

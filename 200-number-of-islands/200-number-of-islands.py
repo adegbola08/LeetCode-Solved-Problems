@@ -18,12 +18,12 @@ class Solution:
         col = 0 <= c and c < len(grid[0])
         
         if not row or not col:
-            return
+            return False
         
         if (r,c) in explored:
-            return
+            return False
         if grid[r][c] != "1":
-            return
+            return False
         explored.add((r,c))
         
         self.explore(r-1, c, grid, explored)
@@ -31,4 +31,4 @@ class Solution:
         self.explore(r, c-1, grid, explored)
         self.explore(r, c+1, grid, explored)
         
-        return
+        return True

@@ -8,8 +8,8 @@ class Solution:
             
             for j in range(len(grid[i])):
                 if grid[i][j] == "1" and (i,j) not in explored:
-                    if self.explore(i, j, grid, explored):
-                        count += 1
+                    self.explore(i, j, grid, explored)
+                    count += 1
         
         return count
         

@@ -13,5 +13,5 @@ class Solution:
             if pos == len(s):
                 return True
             
-        return False if pos != len(s) else False
+        return False
         

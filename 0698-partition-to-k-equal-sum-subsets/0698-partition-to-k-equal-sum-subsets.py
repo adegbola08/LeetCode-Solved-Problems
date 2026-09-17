@@ -3,10 +3,10 @@ from collections import defaultdict
 class Solution:
     def canPartitionKSubsets(self, nums: list[int], k: int) -> bool:
         total = sum(nums)
-        if total % k:
-            return False
-
         target = total // k
+        if (k*target) != total:
+            return False
+            
         nums.sort(reverse=True)
 
         if nums[0] > target:

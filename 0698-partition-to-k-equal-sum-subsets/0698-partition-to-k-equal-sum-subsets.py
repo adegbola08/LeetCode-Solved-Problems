@@ -3,8 +3,7 @@ from collections import defaultdict
 class Solution:
     def canPartitionKSubsets(self, nums: list[int], k: int) -> bool:
         total = sum(nums)
-
-        if total % k != 0:
+        if total % k:
             return False
 
         target = total // k
